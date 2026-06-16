@@ -11,7 +11,7 @@ spec:
     image: vllm/vllm-openai:v0.22.0
     args:
         - --gpu-memory-utilization=0.9
-        - --task=embed
+        - --runner=pooling
     resourceProfile: vram-94gb:1
     env:
         AWS_ENDPOINT_URL: https://minio.lab.sspcloud.fr
