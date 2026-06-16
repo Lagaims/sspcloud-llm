@@ -8,7 +8,7 @@ spec:
     features: [ TextGeneration, SpeechToText ]
     url: s3://projet-models-hf/diffusion/hf_hub/google/gemma-4-26B-A4B-it
     engine: VLLM
-    image: vllm/vllm-openai:v0.20.1
+    image: vllm/vllm-openai:v0.23.0
     args:
         - --reasoning-parser=gemma4
         - --enable-auto-tool-choice
