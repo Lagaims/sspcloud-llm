@@ -8,9 +8,10 @@ spec:
     features: [TextEmbedding]
     url: s3://projet-models-hf/diffusion/hf_hub/Qwen/Qwen3-Embedding-8B
     engine: VLLM
-    image: vllm/vllm-openai:v0.20.1
+    image: vllm/vllm-openai:v0.22.0
     args:
         - --gpu-memory-utilization=0.9
+        - --task=embed
     resourceProfile: vram-94gb:1
     env:
         AWS_ENDPOINT_URL: https://minio.lab.sspcloud.fr
