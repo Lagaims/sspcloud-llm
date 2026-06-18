@@ -1,0 +1,20 @@
+apiVersion: kubeai.org/v1
+kind: Model
+metadata:
+    name: qwen3-vl
+spec:
+    autoscalingDisabled: true
+    replicas: 1
+    features: [TextGeneration]
+    url: s3://projet-models-hf/diffusion/hf_hub/Qwen/Qwen3-VL-32B-Instruct-FP8
+    engine: VLLM
+    image: vllm/vllm-openai:v0.23.0
+    args:
+        - --limit-mm-per-prompt.video=0
+        - --gpu-memory-utilization=0.95
+        - --tensor-parallel-size=1
+        - --async-scheduling
+        - --kv-cache-dtype=fp8
+    resourceProfile: vram-80gb:1
+    env:
+        AWS_ENDPOINT_URL: https://minio.lab.sspcloud.fr
