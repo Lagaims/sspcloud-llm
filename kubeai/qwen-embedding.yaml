@@ -12,6 +12,6 @@ spec:
     args:
         - --gpu-memory-utilization=0.9
         - --runner=pooling
-    resourceProfile: vram-94gb:1
+    resourceProfile: vram-80gb:1
     env:
         AWS_ENDPOINT_URL: https://minio.lab.sspcloud.fr

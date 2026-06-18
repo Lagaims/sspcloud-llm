@@ -15,6 +15,6 @@ spec:
         - --tensor-parallel-size=1
         - --async-scheduling
         - --kv-cache-dtype=fp8
-    resourceProfile: vram-80gb:1
+    resourceProfile: vram-94gb:1
     env:
         AWS_ENDPOINT_URL: https://minio.lab.sspcloud.fr

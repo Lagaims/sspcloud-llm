@@ -4,7 +4,7 @@ metadata:
     name: diffusiongemma-26b-moe
 spec:
     autoscalingDisabled: true
-    replicas: 1
+    replicas: 0
     features: [TextGeneration, SpeechToText]
     url: s3://projet-models-hf/diffusion/hf_hub/google/diffusiongemma-26B-A4B-it
     engine: VLLM
