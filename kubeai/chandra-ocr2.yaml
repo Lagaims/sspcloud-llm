@@ -18,6 +18,7 @@ spec:
         - --max-model-len=65536
         - --max-num-seqs=32
         - --async-scheduling
+        - '--override-generation-config={"temperature": 0.0, "top_p": 0.1}'
     resourceProfile: vram-80gb:1
     env:
         AWS_ENDPOINT_URL: https://minio.lab.sspcloud.fr
